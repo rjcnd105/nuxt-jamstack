@@ -1,7 +1,7 @@
 const postCssPreset = {
+  // Change the postcss-preset-env settings
   order: 'presetEnvAndCssnanoLast',
   stage: 1,
-  // Change the postcss-preset-env settings
   autoprefixer: {
     grid: true,
   },
@@ -13,7 +13,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Server side generate Portfolio',
+    title: 'ssg motion showcase',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -79,15 +79,7 @@ export default {
         cssnano: { preset: 'default' },
       },
 
-      order: ['postcss-import', 'postcss-preset-env', 'cssnano'],
-      preset: {
-        order: 'presetEnvAndCssnanoLast',
-        stage: 1,
-        // Change the postcss-preset-env settings
-        autoprefixer: {
-          grid: true,
-        },
-      },
+      preset: postCssPreset,
     },
   },
 }
