@@ -1,15 +1,15 @@
 const postCssPreset = {
   // Change the postcss-preset-env settings
-  order: 'presetEnvAndCssnanoLast',
   stage: 1,
-  autoprefixer: {
-    grid: true,
-  },
 }
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
+  tailwindcss: {
+    jit: true,
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -33,13 +33,13 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    'nuxt-vite',
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    'nuxt-vite',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -69,15 +69,14 @@ export default {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
       plugins: {
+        'postcss-preset-env': postCssPreset,
         // Disable a plugin by passing false as value
-        'postcss-url': false,
+        // 'postcss-url': false,
         'postcss-nested': {},
         'postcss-responsive-type': {},
-        'postcss-preset-env': postCssPreset,
         'postcss-hexrgba': {},
         'postcss-import': {},
         'postcss-pxtorem': { propList: ['*', '!border*'] },
-        cssnano: { preset: 'default' },
       },
 
       preset: postCssPreset,

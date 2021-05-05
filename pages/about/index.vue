@@ -1,7 +1,5 @@
 <template>
-  <div>
-     im about
-  </div>
+  <div>im about</div>
 </template>
 
 <script lang="ts">
