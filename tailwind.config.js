@@ -2,6 +2,10 @@ export default {
   theme: {},
   variants: {},
   plugins: [],
+
+  // cssPath: '~/assets/css/tailwind.css',
+  configPath: 'tailwind.config.js',
+
   // purge: {
   //   content: [
   //     'components/**/*.vue',
