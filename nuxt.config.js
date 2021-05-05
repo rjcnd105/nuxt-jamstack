@@ -1,10 +1,19 @@
+const postCssPreset = {
+  order: 'presetEnvAndCssnanoLast',
+  stage: 1,
+  // Change the postcss-preset-env settings
+  autoprefixer: {
+    grid: true,
+  },
+}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-jamstack',
+    title: 'Server side generate Portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -52,6 +61,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    },
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -60,9 +72,17 @@ export default {
         'postcss-url': false,
         'postcss-nested': {},
         'postcss-responsive-type': {},
+        'postcss-preset-env': postCssPreset,
         'postcss-hexrgba': {},
+        'postcss-import': {},
+        'postcss-pxtorem': { propList: ['*', '!border*'] },
+        cssnano: { preset: 'default' },
       },
+
+      order: ['postcss-import', 'postcss-preset-env', 'cssnano'],
       preset: {
+        order: 'presetEnvAndCssnanoLast',
+        stage: 1,
         // Change the postcss-preset-env settings
         autoprefixer: {
           grid: true,
