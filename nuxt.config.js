@@ -12,13 +12,13 @@ export default {
   },
 
   dir: {
-    assets: '~/src/assets',
+    assets: 'src/assets',
     app: 'app',
-    layouts: '~/src/layouts',
+    layouts: 'src/layouts',
     middleware: 'middleware',
-    pages: '~/src/pages',
+    pages: 'src/pages',
     static: 'static',
-    store: '~/src/store',
+    store: 'src/store',
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -36,7 +36,7 @@ export default {
   css: ['~/src/assets/css/global.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/preview.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
