@@ -11,6 +11,16 @@ export default {
     jit: true,
   },
 
+  dir: {
+    assets: '~/src/assets',
+    app: 'app',
+    layouts: '~/src/layouts',
+    middleware: 'middleware',
+    pages: '~/src/pages',
+    static: 'static',
+    store: '~/src/store',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ssg motion showcase',
@@ -23,13 +33,16 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/css/global.css'],
+  css: ['~/src/assets/css/global.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ['~/components/'],
+  components: [
+    { path: '~/src/ui/', prefix: 'ui', extensions: ['vue'] },
+    { path: '~/src/ui/', prefix: 'ui', extensions: ['vue'] },
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
