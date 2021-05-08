@@ -41,7 +41,8 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     { path: '~/src/ui/', prefix: 'ui', extensions: ['vue'] },
-    { path: '~/src/ui/', prefix: 'ui', extensions: ['vue'] },
+    { path: '~/src/section/', prefix: 'section', extensions: ['vue'] },
+    { path: '~/src/contents/', prefix: 'contents', extensions: ['vue'] },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -69,7 +70,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      lang: 'kr',
     },
   },
 
