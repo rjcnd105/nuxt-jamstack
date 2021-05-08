@@ -21,15 +21,33 @@
         >
           GitHub
         </a>
+        <div style="color: white">{{ result }}</div>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 
-export default Vue.extend({})
+const doubleSay = (str) => str + ', ' + str
+const capitalize = (str) => str[0].toUpperCase() + str.substring(1)
+const exclaim = (str) => str + '!'
+
+// Easily use pipe syntax with Babel Transform plugins
+// Check out the `nuxt.config.js` to see how I included the plugin
+// Info about that proposal on
+// https://github.com/tc39/proposal-pipeline-operator/#introduction
+
+const result = 'it works with pipes' |> doubleSay |> capitalize |> exclaim
+
+export default {
+  data() {
+    return {
+      result,
+    }
+  },
+}
 </script>
 
 <style>

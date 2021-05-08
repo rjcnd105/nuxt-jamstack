@@ -1,10 +1,28 @@
+import * as R from 'ramda'
+
+const colors = require('tailwindcss/colors')
+
+const spacing = Object.fromEntries(
+  R.range(1, 20).map((num) => [num, `${num / 2}rem`])
+)
+
 export default {
-  theme: {},
+  theme: {
+    colors: {
+      gray: colors.coolGray,
+      // blue: colors.lightBlue,
+      // red: colors.rose,
+      // pink: colors.fuchsia,
+    },
+    spacing: {
+      px: '1px',
+      ...spacing,
+    },
+  },
   variants: {},
   plugins: [],
 
   // cssPath: '~/assets/css/tailwind.css',
-  configPath: 'tailwind.config.js',
 
   // purge: {
   //   content: [

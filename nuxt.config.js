@@ -33,7 +33,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/src/assets/css/global.css'],
+  css: ['~/src/assets/css/global.css', '~/src/assets/css/transition.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/preview.js'],
@@ -47,9 +47,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    'nuxt-vite',
+    // 'nuxt-vite',
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
+    // '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
@@ -77,12 +77,10 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
-      plugins: [
-        ['@babel/plugin-proposal-private-methods', { loose: true }],
-        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
-        ['@babel/plugin-proposal-class-properties', { loose: true }],
-      ],
+      babelrc: false,
+      configFile: './babel.config.js',
     },
+
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
