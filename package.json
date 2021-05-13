@@ -16,7 +16,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@types/ramda": "^0.27.40",
     "gsap": "^3.6.1",
-    "nuxt": "^2.15.5",
+    "nuxt": "^2.15.6",
     "ramda": "^0.27.1"
   },
   "devDependencies": {
