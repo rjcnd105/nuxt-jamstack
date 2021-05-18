@@ -20,7 +20,7 @@
     "ramda": "^0.27.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-parser": "^7.14.3",
     "@babel/plugin-proposal-partial-application": "^7.12.13",
     "@babel/plugin-proposal-pipeline-operator": "^7.12.13",
     "@babel/plugin-proposal-record-and-tuple": "^7.13.0",
