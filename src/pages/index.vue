@@ -2,9 +2,12 @@
   <div class="container">
     <div>
       <h3>motion</h3>
-      <NuxtLink to="/motion/scroll">SCROLL</NuxtLink>
+      <NuxtLink :class="$style.link" to="/motion/scroll">SCROLL</NuxtLink>
+      <NuxtLink :class="$style.link" to="/motion/onePageScroll"
+        >ONE PAGE SCROLL
+      </NuxtLink>
 
-      <h3 :class="$style.title">showcase</h3>
+      <!--      <h3 :class="$style.title">showcase</h3>-->
     </div>
   </div>
 </template>
@@ -26,7 +29,14 @@ export default {
 }
 */
 
+.link {
+  display: block;
+  color: #000099;
+  text-decoration: underline;
+}
+
 .title {
+  font-size: 24px;
   @apply bg-gray-50;
 }
 </style>
