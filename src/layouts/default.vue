@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <BasicTemplate>
     <Nuxt />
-  </div>
+  </BasicTemplate>
 </template>
 
 <style>
@@ -24,3 +24,9 @@ html {
   margin: 0;
 }
 </style>
+<script>
+import BasicTemplate from './BasicTemplate'
+export default {
+  components: { BasicTemplate },
+}
+</script>

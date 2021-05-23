@@ -36,7 +36,10 @@ export default {
   css: ['~/src/assets/css/global.css', '~/src/assets/css/transition.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/preview.js'],
+  plugins: [
+    '~/plugins/preview.js',
+    { src: '~/plugins/gsap.js', mode: 'client' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
@@ -44,7 +47,6 @@ export default {
     { path: '~/src/section/', prefix: 'section', extensions: ['vue'] },
     { path: '~/src/contents/', prefix: 'contents', extensions: ['vue'] },
   ],
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // 'nuxt-vite',
@@ -52,20 +54,29 @@ export default {
     // '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+
+    '@nuxtjs/google-fonts',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/pwa',
   ],
+  googleFonts: {
+    families: {
+      'Do+Hyeon': true,
+      'Noto+Sans+KR': [300],
+      Newsreader: { wght: [300, 400], ital: [400] },
+      Lato: [100, 300],
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    ['@nuxtjs/pwa'],
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  middleware: [],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -74,8 +85,15 @@ export default {
     },
   },
 
+  vue: {
+    config: {
+      devtools: true,
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ['gsap'],
     babel: {
       babelrc: false,
       configFile: './babel.config.js',
@@ -85,14 +103,17 @@ export default {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
       plugins: {
-        'postcss-preset-env': postCssPreset,
+        // 'postcss-preset-env': postCssPreset,
         // Disable a plugin by passing false as value
         // 'postcss-url': false,
         'postcss-nested': {},
         'postcss-responsive-type': {},
         'postcss-hexrgba': {},
         'postcss-import': {},
-        'postcss-pxtorem': { propList: ['*', '!border*'] },
+        'postcss-pxtorem': {
+          propList: ['*', '!border*'],
+          exclude: '~/src/assets/global.css',
+        },
       },
 
       preset: postCssPreset,

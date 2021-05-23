@@ -1,6 +1,6 @@
 export default function ({ query, enablePreview }) {
-  console.log('preview', query, enablePreview)
   if (query.preview) {
+    console.log('preview plugin', query, enablePreview)
     enablePreview()
   }
 }
