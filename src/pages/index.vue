@@ -2,9 +2,11 @@
   <div class="container">
     <div>
       <h3>motion</h3>
-      <NuxtLink :class="$style.link" to="/motion/scroll">SCROLL</NuxtLink>
-      <NuxtLink :class="$style.link" to="/motion/onePageScroll"
-        >ONE PAGE SCROLL
+      <NuxtLink :class="$style.link" :to="{ name: 'motion-scroll' }"
+        >MOTION - SCROLL</NuxtLink
+      >
+      <NuxtLink :class="$style.link" :to="{ name: 'motion-onePageScroll' }"
+        >MOTION - ONE PAGE SCROLL
       </NuxtLink>
 
       <!--      <h3 :class="$style.title">showcase</h3>-->

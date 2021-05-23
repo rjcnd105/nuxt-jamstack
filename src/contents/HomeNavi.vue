@@ -1,14 +1,8 @@
 <template>
   <nav :class="$style.stepNavi">
-    <NuxtLink :class="$style.link" to="/">HOME</NuxtLink>
+    <NuxtLink :class="$style.link" :to="{ name: 'index' }">HOME</NuxtLink>
   </nav>
 </template>
-
-<script>
-export default {
-  data() {},
-}
-</script>
 
 <style lang="postcss" scoped module>
 .stepNavi {

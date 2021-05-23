@@ -14,6 +14,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 export default {
   layout: 'leaf',
+
   mounted() {
     gsap.defaults({ ease: Power2.easeInOut, duration: 4 })
     console.log('ScrollTrigger', ScrollTrigger)
