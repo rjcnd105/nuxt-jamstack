@@ -13,8 +13,9 @@ import { gsap, Power2 } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 export default {
+  layout: 'leaf',
   mounted() {
-    gsap.defaults({ ease: Power2.easeInOut, duration: 2 })
+    gsap.defaults({ ease: Power2.easeInOut, duration: 4 })
     console.log('ScrollTrigger', ScrollTrigger)
     console.log('mounted', this.$refs.page.offsetHeight, this.$style.page)
     //
@@ -27,14 +28,15 @@ export default {
     //
     ScrollTrigger.create({
       animation: tl,
+      pinSpacing: false,
       // trigger: '#page',
       trigger: this.$refs.page,
       start: 'top top',
-      end: `+=${this.$refs.page.offsetHeight} 100%`,
+      end: `bottom bottom`,
       scrub: true,
       pin: true,
       // anticipatePin: 스크롤할때 미리 예측하고 그림으로써 더 부드럽게 보임. 다만 최신의 브라우저에서는 불필요.
-      // anticipatePin: 1,
+      anticipatePin: 1,
     })
   },
 }
@@ -73,7 +75,7 @@ export default {
 
 <style lang="postcss" module scoped>
 .page {
-  height: 10000px;
+  height: 7000px;
   width: 100%;
 }
 </style>

@@ -24,6 +24,7 @@
 import { gsap } from 'gsap'
 
 export default {
+  layout: 'leaf',
   mounted() {
     console.log('mounted', this.$refs)
     gsap.to('.a', {

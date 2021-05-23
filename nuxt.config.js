@@ -43,9 +43,9 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
-    { path: '~/src/ui/', prefix: 'ui', extensions: ['vue'] },
-    { path: '~/src/section/', prefix: 'section', extensions: ['vue'] },
-    { path: '~/src/contents/', prefix: 'contents', extensions: ['vue'] },
+    { path: '~/src/ui/', prefix: 'ui' },
+    { path: '~/src/section/', prefix: 'section' },
+    { path: '~/src/contents/', prefix: 'contents' },
   ],
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
