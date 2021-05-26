@@ -5,8 +5,14 @@
       <NuxtLink :class="$style.link" :to="{ name: 'motion-scroll' }"
         >MOTION - SCROLL</NuxtLink
       >
-      <NuxtLink :class="$style.link" :to="{ name: 'motion-onePageScroll' }"
-        >MOTION - ONE PAGE SCROLL
+      <NuxtLink :class="$style.link" :to="{ name: 'motion-pageScroll' }"
+        >MOTION - PAGE SCROLL
+      </NuxtLink>
+      <NuxtLink :class="$style.link" :to="{ name: 'motion-snapScroll' }"
+        >MOTION - SNAP PAGE SCROLL
+      </NuxtLink>
+      <NuxtLink :class="$style.link" :to="{ name: 'motion-svg' }"
+        >MOTION - SVG
       </NuxtLink>
 
       <!--      <h3 :class="$style.title">showcase</h3>-->
