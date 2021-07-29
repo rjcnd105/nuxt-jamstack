@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h3>motion</h3>
+      <h3>MOTION</h3>
       <NuxtLink :class="$style.link" :to="{ name: 'motion-scroll' }"
         >MOTION - SCROLL</NuxtLink
       >
@@ -11,18 +11,21 @@
       <NuxtLink :class="$style.link" :to="{ name: 'motion-snapScroll' }"
         >MOTION - SNAP PAGE SCROLL
       </NuxtLink>
-      <NuxtLink :class="$style.link" :to="{ name: 'motion-svg' }"
-        >MOTION - SVG
-      </NuxtLink>
+      <br/>
 
+      <h3>OTHER</h3>
+      <NuxtLink :class="$style.link" :to="{ name: 'other-svg' }"
+        >SVG
+      </NuxtLink>
+      <br/>
+
+      <h3>PAGE</h3>
       <!--      <h3 :class="$style.title">showcase</h3>-->
     </div>
   </div>
 </template>
 
 <script>
-import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 export default {
   data() {
     return {}
