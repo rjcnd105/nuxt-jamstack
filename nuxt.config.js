@@ -53,6 +53,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     // '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
+    '@nuxt/postcss8',
     '@nuxtjs/stylelint-module',
 
     '@nuxtjs/google-fonts',
