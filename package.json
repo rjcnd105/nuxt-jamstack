@@ -14,7 +14,7 @@
     "@tailwindcss/line-clamp": "^0.2.0",
     "consola": "^2.15.3",
     "gsap": "^3.7.1",
-    "ramda": "^0.27.1"
+    "ramda": "^0.28.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
