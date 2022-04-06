@@ -11,7 +11,7 @@
     "lint": "yarn lint:js && yarn lint:style"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "^0.2.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
     "consola": "^2.15.3",
     "gsap": "^3.7.1",
     "ramda": "^0.27.1"
