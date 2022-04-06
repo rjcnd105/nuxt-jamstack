@@ -11,6 +11,9 @@
       <NuxtLink :class="$style.link" :to="{ name: 'motion-snapScroll' }"
         >MOTION - SNAP PAGE SCROLL
       </NuxtLink>
+      <NuxtLink :class="$style.link" :to="{ name: 'motion-svgDraw' }"
+      >MOTION - SVG
+      </NuxtLink>
       <br/>
 
       <h3>OTHER</h3>
